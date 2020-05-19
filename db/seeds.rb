@@ -8,6 +8,9 @@
 
 # Game.create(name: 'Rune Factory 4 Special', genre: 'Role-playing (RPG)', price: 5999, release_date: '2019-07-25')
 
+#MY QUERYS -- CHECKING ACTIVERECORDS
+
+#INSERT
 =begin
 g = Game.new
 g.name = 'Borderlands 3'
@@ -26,6 +29,7 @@ Game.create([ {:name=>"Zombie Driver: Immortal Edition", :genre=>"Racing", :pric
 {:name=>"Children of Morta", :genre=>"Role-playing (RPG)", :price=>6999, :release_date=>"2019-Sep-03"} ])
 =end
 
+#UPDATE
 #g = Game.find_by(name: 'Borderlands 3')
 #g.update(genre: 'Shooter')
 #g.save
@@ -33,5 +37,13 @@ Game.create([ {:name=>"Zombie Driver: Immortal Edition", :genre=>"Racing", :pric
 #g = Game.find_by(name: 'Pokémon Shield')
 #g.update(price: 3999)
 
-g = Game.where(genre: "Role-playing (RPG)")
-g.update(price: 299)
+#g = Game.where(genre: "Role-playing (RPG)")
+#g.update(price: 299)
+
+#DELETE
+#g = Game.find_by(id: 3)
+#g.destroy
+
+#Game.destroy(genre: 'Adventure')#g.destroy
+
+#Game.destroy_all
