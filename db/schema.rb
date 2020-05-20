@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2020_05_20_005403) do
 
   create_table "critics", force: :cascade do |t|
     t.string "username"
-    t.text "body"
+    t.string "body"
     t.bigint "game_id", null: false
     t.string "title"
     t.index ["game_id"], name: "index_critics_on_game_id"

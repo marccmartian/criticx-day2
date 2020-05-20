@@ -47,3 +47,13 @@ Game.create([ {:name=>"Zombie Driver: Immortal Edition", :genre=>"Racing", :pric
 #Game.destroy(genre: 'Adventure')#g.destroy
 
 #Game.destroy_all
+
+Company.create([
+  {:name => "Neverland", :description => "Japanese video game developer ", :start_date => "1993-May-7", :country =>"Japan"},
+  {:name => "Gearbox", :description => "American video game developer ", :start_date => "1999-Jun-5", :country =>"USA"},
+])
+
+Game.create([
+  {:name=>"Rune Factory 4 Special", :genre=>"Role-playing (RPG)", :price => 5999, :release_date=>"2019-Jul-25", :company_id => 1},
+  {:name=>"Bonderlands 3", :genre=>"Simulator", :price => 5999, :release_date=>"2019-09-13", :company_id => 2}
+])
