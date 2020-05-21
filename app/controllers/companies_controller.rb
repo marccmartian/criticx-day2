@@ -28,4 +28,13 @@ class CompaniesController < ApplicationController
     @comp.destroy
     render json: { status: 'Successfully destroyed', data: @comp }, status: :ok
   end
+
+  def update
+    @comp = Company.find(params[:id])
+    if @comp.update_attributes(company_params)
+      render json: @comp
+    else
+      render json: @comp.errors, status: :unprocessable_entity
+    end
+  end
 end
