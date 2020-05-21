@@ -22,4 +22,10 @@ class CompaniesController < ApplicationController
   def company_params
     params.require(:company).permit(:name, :description, :start_date, :country)
   end
+
+  def destroy
+    @comp = Company.find(params[:id])
+    @comp.destroy
+    render json: { status: 'Successfully destroyed', data: @comp }, status: :ok
+  end
 end
